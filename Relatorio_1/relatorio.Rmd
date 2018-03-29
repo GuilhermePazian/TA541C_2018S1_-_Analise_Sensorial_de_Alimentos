@@ -1,0 +1,118 @@
+---
+title: ""
+geometry:  a4paper,left=3cm,right=2cm,top=3cm, bottom= 2cm
+lang: pt-br
+header-includes:
+- \usepackage{setspace}
+- \usepackage{indentfirst}
+- \usepackage[utf8]{inputenc}
+- \usepackage{mathptmx}
+- \usepackage{enumerate}
+- \usepackage{url} 
+- \usepackage{lipsum}
+- \usepackage{multicol}
+- \usepackage{float}
+- \usepackage{subcaption}
+- \usepackage{multirow}
+- \usepackage{booktabs}
+- \usepackage{longtable}
+output:
+  pdf_document:
+  html_document: default
+  fig_caption: yes
+  mainfont: Times New Roman
+fontsize: 11bp
+---
+
+\begin{titlepage}
+\begin{center}
+\thispagestyle{empty}
+\begin{figure}[!htb]
+\begin{center}
+\begin{minipage}[b]{0.5\linewidth}
+\begin{center}
+\end{center}
+\end{minipage}
+\begin{minipage}[b]{0.7\linewidth}
+\begin{center}
+\vspace*{1cm}
+ {\large \bf Universidade Estadual de Campinas\\[5pt]
+Faculdade de Engenharia de Alimentos\\[3pt]
+TA541 - Análise Sensorial de Alimentos\\[3pt]}
+\end{center}
+\end{minipage}
+\end{center}
+\end{figure}
+\vspace*{\stretch{1}}
+\begin{center}
+\vspace*{5cm}
+{\huge \bf Relatório Técnico: Testes Discriminativos \\[7pt]
+}
+\end{center}
+\vspace*{\stretch{1}}
+\begin{center}
+\vspace*{4cm}
+{\Large \bf 	Guilherme Pazian  RA:160323\\ 
+  Henrique Capatto RA: XXXX\break
+}\\[3pt]
+{\large \bf Professor: \\
+Jorge Behrens}\\[5pt]
+\end{center}
+\vspace*{\stretch{1}}
+\centerline{\bf Campinas-SP, 02 de Abril de 2018}
+\vspace*{\stretch{1}}
+\end{center}
+\end{titlepage}
+
+
+\setlength{\parindent}{3em}
+\setlength{\parskip}{1em}
+\onehalfspacing
+\newpage
+
+```{r global options, echo=FALSE}
+#definindo opções padrões dos chunks
+
+knitr::opts_chunk$set(fig.align='center',fig.path='Figs/', fig.pos="H", echo=FALSE, warning=FALSE, message=FALSE)
+#mudando o separador decimal para resultados "printados"
+options(OutDec= ",")
+```
+
+```{r pacotes e funcoes,echo=FALSE}
+#pacotes
+#Insira os pacotes utilizados na lista abaixo para que todos consigam rodar o programa independente do pc
+pacotes <- c("readxl")
+
+#descomente o código abaixo caso seja a 1 vez que for rodar noo seu pc
+
+###################
+#install.packages(pacotes)
+###################
+```
+
+
+#1. Introdução
+
+
+
+#2. Objetivo
+
+##2.1 Teste de comparação pareada
+
+testar se néctares de laranja (50% de polpa) diferiam em relação ao gosto doce em função da concentração de açúcar:Amostra A : 8,5% sacarose
+Amostra B: 11% sacarose
+
+#3. Materiais e métodos
+
+##3.1 Teste de comparação pareada
+
+Método utilizado: teste de comparação pareada direcional
+
+O teste foi aplicado em 34 "provadores", cada "provador" um recebeu duas amostras codificadas de suco de laranja num copo de cerca de 30 ml dentro de uma bandeja de plastico, estes foram direcionados para uma "cabine" para que pudessem ter um certo isolamento dos demais "provadores" e assim terem maisor concentração deveriam provar as amostras na sequência, da esquerda para a direita, uma única vez. Indique qual das amostras é a mais doce .
+
+
+#4. Resultados e Discussão
+
+#5. Conclusão
+
+#5. Referências Bibliográficas

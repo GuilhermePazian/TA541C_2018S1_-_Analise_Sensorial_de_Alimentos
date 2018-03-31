@@ -92,27 +92,121 @@ pacotes <- c("readxl")
 
 
 #1. Introdução
-
+  
 
 
 #2. Objetivo
+  
+##2.1 Teste de comparação pareada direcional
+  
+Testar se néctares de laranja (50% de polpa) diferiam em relação ao gosto doce em função da concentração de açúcar:
+Amostra A : 8,5% sacarose
+Amostra B: 11% sacarose.
+  
+##2.2 Teste duo-trio
+Testar se existe diferença perceptível entre o leite integral e o leite semidesnatado processados por UHT:
+Amostra A : leite integral, 3% de gordura
+Amostra B: leite semidesnatado, 1% de gordura
 
-##2.1 Teste de comparação pareada
+A diferença sensorial é geral, não especificada.
 
-testar se néctares de laranja (50% de polpa) diferiam em relação ao gosto doce em função da concentração de açúcar:Amostra A : 8,5% sacarose
-Amostra B: 11% sacarose
+##2.3 Teste Triangular
 
+Testar se a substituição de sacarose (10%) por um edulcorante não calórico, mesmo em equivalência de dulçor (aspartame), gera diferença sensorialmente perceptível :
+Amostra A : refrigerante normal
+Amostra B: refrigerante zero caloria
+
+A diferença sensorial é geral, não especificada.
+
+  
 #3. Materiais e métodos
 
-##3.1 Teste de comparação pareada
+##3.1 Teste de comparação pareada direcional
+  
+Método utilizado: teste de comparação pareada direcional.
+  
+O teste foi aplicado em 34 experimentadores, cada experimentador recebeu uma bandeja de plastico com duas amostras codificadas de suco de laranja (uma amostra A e uma B) apresentadas num copo de cerca de 30 ml, estes foram direcionados para uma "cabine" (neste caso é cabine mesmo??) de experimentação para que pudessem ter um certo isolamento dos demais experimentadores e assim realizar uma análise independente. Em estado de concentração deveriam provar as amostras na sequência, da esquerda para a direita, uma única vez e Indicar qual das amostras era a mais doce. A sequencia das amostras foram aleatorizadas para cada experimentador.
+  
+##3.2 Teste duo-trio
 
-Método utilizado: teste de comparação pareada direcional
+Método utilizado: teste duo trio.
 
-O teste foi aplicado em 34 "provadores", cada "provador" um recebeu duas amostras codificadas de suco de laranja num copo de cerca de 30 ml dentro de uma bandeja de plastico, estes foram direcionados para uma "cabine" para que pudessem ter um certo isolamento dos demais "provadores" e assim terem maisor concentração deveriam provar as amostras na sequência, da esquerda para a direita, uma única vez. Indique qual das amostras é a mais doce .
+O teste foi aplicado em 31 experimentadores, cada experimentador recebeu uma bandeja de plastico com três amostras, uma padrão e duas codificadas (uma amostra A e uma B) de leite apresentadas em copos de cerca de 30 ml. Os experimentadores foram direcionados para uma "cabine" (neste caso é cabine mesmo??) de experimentação para que pudessem ter um certo isolamento dos demais e assim realizar uma análise independente. Em estado de concentração deveriam provar a amostra padrão e então provar as amostras codificadas na sequência, da esquerda para a direita, uma única vez e Indicar qual das amostras era igual a amostra padrão. A sequencia das amostras foram aleatorizadas para cada experimentador, assim como a amostra padrão foi aleatorizada entre as amostras A e B.
 
+##3.3 Teste Triangular
+
+Método utilizado: Teste Triangular.
+
+O teste foi aplicado em 35 experimentadores, cada experimentador recebeu uma bandeja de plastico com três amostras codificadas (uma amostra A, uma B e uma terceira aleatorizada) de refrigerante tipo cola apresentadas em copos de cerca de 30 ml. Os experimentadores foram direcionados para uma "cabine" (neste caso é cabine mesmo??) de experimentação para que pudessem ter um certo isolamento dos demais e assim realizar uma análise independente. Em estado de concentração deveriam provar as amostras codificadas na sequência, da esquerda para a direita, uma única vez e Indicar qual das amostras era diferente das demais. A sequencia das amostras foram aleatorizadas para cada experimentador, assim como a terceira amostra foi aleatorizada entre as amostras A e B.
 
 #4. Resultados e Discussão
 
-#5. Conclusão
+##4.1 Teste de comparação pareada direcional
+  
+O experimento resultou nas seguintes indicações:
+  
+- 5 experimentadores indicaram a amostra A como sendo a mais doce (indicação incorreta);
 
-#5. Referências Bibliográficas
+- 29 experimentadores indicaram a amostra B como sendo a mais doce (indicação correta).
+
+```{r}
+n <- 34
+correto <- 23
+p_h0 <- .5
+```
+Para realizar o teste, consideramos a hipotese nula de que as amostras não se diferenciam em relação ao gosto doce.
+
+Este teste é baseado na distribuição binomial, e considerando o número total de julgamentos igual a `r n` (n=`r n`), número de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste de comparação pareada-prefereça e duo-trio"$^1$ que a hipótese nula pode ser rejeitada a um nível de significancia de 0,1%, uma vez que observamos `r correto` que é um valor maior do que o valor esperado (27 acertos) considerando 0,1% de signicancia.
+  
+##4.2 Teste duo-trio
+
+O experimento resultou nas seguintes indicações:
+  
+- 13 experimentadores indicaram a amostra correspondente à amostra padrão de forma incorreta;
+
+- 18 experimentadores indicaram a amostra correspondente à amostra padrão de forma correta.
+
+```{r}
+n <- 31
+correto <- 18
+p_h0 <- .5
+```
+Para realizar o teste, consideramos a hipotese nula de que as amostras não se diferenciam em relação à percepção sensorial.
+
+Este teste é baseado na distribuição binomial, e considerando o número total de julgamentos igual a `r n` (n=`r n`), número de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste de comparação pareada-prefereça e duo-trio"$^1$ que a hipótese nula não pode ser rejeitada a um nível de significancia de 5%, uma vez que observamos y = `r correto` que é um valor menor do que o valor esperado (21 acertos) considerando 5% de signicancia.
+
+##4.3 Teste Triangular
+  
+O experimento resultou nas seguintes indicações:
+  
+- 10 experimentadores indicaram a amostra diferente das demais de forma incorreta;
+
+- 25 experimentadores indicaram a amostra diferente das demais de forma correta.
+
+```{r}
+n <- 35
+correto <- 25
+p_h0 <- round(1/3,4)
+```
+Para realizar o teste, consideramos a hipotese nula de que as amostras não se diferenciam em relação à percepção sensorial.
+
+Este teste é baseado na distribuição binomial, e considerando o número total de julgamentos igual a `r n` (n=`r n`), número de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste triangular (p = 1/3)"$^1$ que a hipótese nula pode ser rejeitada a um nível de significancia de 0,1%, uma vez que observamos y = `r correto` que é um valor maior do que o valor esperado (22 acertos) considerando 0,1% de signicancia.
+  
+#5. Conclusão
+  
+##5.1 Teste de comparação pareada direcional
+  
+Em relação a este experimento sensorial podemos concluir, com base nos resultados, que existe diferença perceptível de doçura, a 0,1% de significância, entre os dois sucos, sendo que a amostra B (11% de açúcar) foi indicada pelos avaliadores como sendo a mais doce. 
+  
+##5.2 Teste duo-trio
+Em relação a este experimento sensorial podemos concluir, com base nos resultados, que não existe diferença perceptível entre o leite integral e o semidesnatado, ao nível de 5% de significância. 
+
+##5.3 Teste Triangular
+  
+Em relação a este experimento sensorial podemos concluir, com base nos resultados, que existe diferença significativa entre os refrigerantes de cola normal e zero a 0,1% de significância.
+  
+#6. Referências Bibliográficas
+  
+
+1 - O'MOHONY (1996)
+

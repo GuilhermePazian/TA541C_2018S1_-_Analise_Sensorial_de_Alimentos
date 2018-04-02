@@ -38,7 +38,7 @@ fontsize: 11bp
 \vspace*{1cm}
  {\large \bf Universidade Estadual de Campinas\\[5pt]
 Faculdade de Engenharia de Alimentos\\[3pt]
-TA541 - An·lise Sensorial de Alimentos\\[3pt]}
+TA541 - An√°lise Sensorial de Alimentos\\[3pt]}
 \end{center}
 \end{minipage}
 \end{center}
@@ -46,7 +46,7 @@ TA541 - An·lise Sensorial de Alimentos\\[3pt]}
 \vspace*{\stretch{1}}
 \begin{center}
 \vspace*{5cm}
-{\huge \bf RelatÛrio TÈcnico: Testes Discriminativos \\[7pt]
+{\huge \bf Relat√≥rio T√©cnico: Testes Discriminativos \\[7pt]
 }
 \end{center}
 \vspace*{\stretch{1}}
@@ -71,7 +71,7 @@ Jorge Behrens}\\[5pt]
 \newpage
 
 ```{r global options, echo=FALSE}
-#definindo opÁıes padrıes dos chunks
+#definindo op√ß√µes padr√µes dos chunks
 
 knitr::opts_chunk$set(fig.align='center',fig.path='Figs/', fig.pos="H", echo=FALSE, warning=FALSE, message=FALSE)
 #mudando o separador decimal para resultados "printados"
@@ -83,7 +83,7 @@ options(OutDec= ",")
 #Insira os pacotes utilizados na lista abaixo para que todos consigam rodar o programa independente do pc
 pacotes <- c("readxl")
 
-#descomente o cÛdigo abaixo caso seja a 1 vez que for rodar noo seu pc
+#descomente o c√≥digo abaixo caso seja a 1 vez que for rodar noo seu pc
 
 ###################
 #install.packages(pacotes)
@@ -91,93 +91,140 @@ pacotes <- c("readxl")
 ```
 
 
-#1. IntroduÁ„o
+#1. Introdu√ß√£o
   
-
+  O mercado das industrias de alimentos atual √© muito competitivo, por isso √© extremamente importante que as industrias tenham um planejamento e um √≥timo entendimento de seu produto para que as mudan√ßas em seus produtos e processos n√£o impactem negativamente na percep√ß√£o sensorial de seus clientes. Muitos aspectos podem mudar a experiencia sensorial quanto a um produto, dentre estes, podemos citar: mudan√ßa de fornecedor de "mat√©ria prima", excacez de alguma "mat√©ria prima", pre√ßo elevado de alguma "mat√©ria prima", mudan√ßa estrat√©gica de mercado que influencie na receita do produto, mudan√ßa de processo na industria, entre outros.
+  
+  Com a mudan√ßa da experiencia sensorial que o produto oferece, as vendas podem ser impactadas e a industria pode perder, ou ganhar, mercado de consumidores. A fim de entender os impactos e/ou planejar mudan√ßas, a industria alimenticia costuma realizar experimentos sensoriais aos quais podem apresentar resultados que ter√£o forte influ√™ncia no planejamento estrat√©gico.
+  
+  O presente relat√≥rio visa apresentar os experimentos sensoriais realizados em sala de aula, no contexto da disciplina TA541, assim como seus respectivos resultados e conclus√µes. Os experimentos foram realizados no laborat√≥rio destinado para tal fim na Faculdade de Engenharia de Alimentos da UNICAMP.
 
 #2. Objetivo
   
-##2.1 Teste de comparaÁ„o pareada direcional
+##2.1 Teste de compara√ß√£o pareada direcional
   
-Testar se nÈctares de laranja (50% de polpa) diferiam em relaÁ„o ao gosto doce em funÁ„o da concentraÁ„o de aÁ˙car:
+Testar se n√©ctares de laranja (50% de polpa) diferiam em rela√ß√£o ao gosto doce em fun√ß√£o da concentra√ß√£o de a√ß√∫car:
 Amostra A : 8,5% sacarose
 Amostra B: 11% sacarose.
   
 ##2.2 Teste duo-trio
-Testar se existe diferenÁa perceptÌvel entre o leite integral e o leite semidesnatado processados por UHT:
+Testar se existe diferen√ßa percept√≠vel entre o leite integral e o leite semidesnatado processados por UHT:
 Amostra A : leite integral, 3% de gordura
 Amostra B: leite semidesnatado, 1% de gordura
 
-A diferenÁa sensorial È geral, n„o especificada.
+A diferen√ßa sensorial √© geral, n√£o especificada.
 
 ##2.3 Teste Triangular
 
-Testar se a substituiÁ„o de sacarose (10%) por um edulcorante n„o calÛrico, mesmo em equivalÍncia de dulÁor (aspartame), gera diferenÁa sensorialmente perceptÌvel :
+Testar se a substitui√ß√£o de sacarose (10%) por um edulcorante n√£o cal√≥rico, mesmo em equival√™ncia de dul√ßor (aspartame), gera diferen√ßa sensorialmente percept√≠vel :
 Amostra A : refrigerante normal
 Amostra B: refrigerante zero caloria
 
-A diferenÁa sensorial È geral, n„o especificada.
+A diferen√ßa sensorial √© geral, n√£o especificada.
+  
+##2.4 Teste Tetra√©drico
 
-  
-#3. Materiais e mÈtodos
+O teste foi realizado com objetivo de testar se a redu√ß√£o de gordura em um determinado latic√≠nio √© percept√≠vel sensiorialmente. Para tal teste, utilizou-se duas vers√µes do queijo processado, um com 25% de gordura e outra com, uma vers√£o light, com 12% de gordura. 
 
-##3.1 Teste de comparaÁ„o pareada direcional
+Nesse teste busca-se identificar diferen√ßas gerais.
+
+##2.5 Teste de Ordena√ß√£o
+
+O objetivo do teste √© verificar redu√ß√µes sucessivas de sal por glutamato monoss√≥dico (MSG) afetam a percep√ß√£o de gosto salgado em molho de tomate.
+
+Amostra A: 0 sal/ 1,0% MSG
+Amostra B: 0,75% MSG/ 0,25% sal
+Amostra C: 0,50% MSG /0,50% sal
+Amostra D: 0,25% MSG / 0,75% sal
+Amostra E : 0 MSG / 1,0% sal
   
-MÈtodo utilizado: teste de comparaÁ„o pareada direcional.
+##2.6 Teste de Compara√ß√£o Multipla
   
-O teste foi aplicado em 34 experimentadores, cada experimentador recebeu uma bandeja de plastico com duas amostras codificadas de suco de laranja (uma amostra A e uma B) apresentadas num copo de cerca de 30 ml, estes foram direcionados para uma "cabine" (neste caso È cabine mesmo??) de experimentaÁ„o para que pudessem ter um certo isolamento dos demais experimentadores e assim realizar uma an·lise independente. Em estado de concentraÁ„o deveriam provar as amostras na sequÍncia, da esquerda para a direita, uma ˙nica vez e Indicar qual das amostras era a mais doce. A sequencia das amostras foram aleatorizadas para cada experimentador.
+O objetivo do teste √© a de compara√ß√£o 
+  
+  
+  
+#3. Materiais e m√©todos
+
+##3.1 Teste de compara√ß√£o pareada direcional
+  
+M√©todo utilizado: teste de compara√ß√£o pareada direcional.
+  
+O teste foi aplicado em 34 experimentadores, cada experimentador recebeu uma bandeja de plastico com duas amostras codificadas de suco de laranja (uma amostra A e uma B) apresentadas num copo de cerca de 30 ml, estes foram direcionados para uma cabine de experimenta√ß√£o para que pudessem ter um certo isolamento dos demais experimentadores e assim realizar uma an√°lise independente. Em estado de concentra√ß√£o deveriam provar as amostras na sequ√™ncia, da esquerda para a direita, uma √∫nica vez e Indicar qual das amostras era a mais doce. A sequencia das amostras foram aleatorizadas para cada experimentador.
   
 ##3.2 Teste duo-trio
 
-MÈtodo utilizado: teste duo trio.
+M√©todo utilizado: teste duo trio.
 
-O teste foi aplicado em 31 experimentadores, cada experimentador recebeu uma bandeja de plastico com trÍs amostras, uma padr„o e duas codificadas (uma amostra A e uma B) de leite apresentadas em copos de cerca de 30 ml. Os experimentadores foram direcionados para uma "cabine" (neste caso È cabine mesmo??) de experimentaÁ„o para que pudessem ter um certo isolamento dos demais e assim realizar uma an·lise independente. Em estado de concentraÁ„o deveriam provar a amostra padr„o e ent„o provar as amostras codificadas na sequÍncia, da esquerda para a direita, uma ˙nica vez e Indicar qual das amostras era igual a amostra padr„o. A sequencia das amostras foram aleatorizadas para cada experimentador, assim como a amostra padr„o foi aleatorizada entre as amostras A e B.
+O teste foi aplicado em 31 experimentadores, cada experimentador recebeu uma bandeja de plastico com tr√™s amostras, uma padr√£o e duas codificadas (uma amostra A e uma B) de leite apresentadas em copos de cerca de 30 ml. Os experimentadores foram direcionados para uma cabine de experimenta√ß√£o para que pudessem ter um certo isolamento dos demais e assim realizar uma an√°lise independente. Em estado de concentra√ß√£o deveriam provar a amostra padr√£o e ent√£o provar as amostras codificadas na sequ√™ncia, da esquerda para a direita, uma √∫nica vez e Indicar qual das amostras era igual a amostra padr√£o. A sequencia das amostras foram aleatorizadas para cada experimentador, assim como a amostra padr√£o foi aleatorizada entre as amostras A e B.
 
 ##3.3 Teste Triangular
 
-MÈtodo utilizado: Teste Triangular.
+M√©todo utilizado: Teste Triangular.
 
-O teste foi aplicado em 35 experimentadores, cada experimentador recebeu uma bandeja de plastico com trÍs amostras codificadas (uma amostra A, uma B e uma terceira aleatorizada) de refrigerante tipo cola apresentadas em copos de cerca de 30 ml. Os experimentadores foram direcionados para uma "cabine" (neste caso È cabine mesmo??) de experimentaÁ„o para que pudessem ter um certo isolamento dos demais e assim realizar uma an·lise independente. Em estado de concentraÁ„o deveriam provar as amostras codificadas na sequÍncia, da esquerda para a direita, uma ˙nica vez e Indicar qual das amostras era diferente das demais. A sequencia das amostras foram aleatorizadas para cada experimentador, assim como a terceira amostra foi aleatorizada entre as amostras A e B.
-
-#4. Resultados e Discuss„o
-
-##4.1 Teste de comparaÁ„o pareada direcional
+O teste foi aplicado em 35 experimentadores, cada experimentador recebeu uma bandeja de plastico com tr√™s amostras codificadas (uma amostra A, uma B e uma terceira aleatorizada) de refrigerante tipo cola apresentadas em copos de cerca de 30 ml. Os experimentadores foram direcionados para uma cabine de experimenta√ß√£o para que pudessem ter um certo isolamento dos demais e assim realizar uma an√°lise independente. Em estado de concentra√ß√£o deveriam provar as amostras codificadas na sequ√™ncia, da esquerda para a direita, uma √∫nica vez e Indicar qual das amostras era diferente das demais. A sequencia das amostras foram aleatorizadas para cada experimentador, assim como a terceira amostra foi aleatorizada entre as amostras A e B.
   
-O experimento resultou nas seguintes indicaÁıes:
-  
-- 5 experimentadores indicaram a amostra A como sendo a mais doce (indicaÁ„o incorreta);
+##3.4 Teste tetra√©drico
 
-- 29 experimentadores indicaram a amostra B como sendo a mais doce (indicaÁ„o correta).
+M√©todo utilizado: Teste tera√©drico
+
+O teste foi aplicado em 38 experimentadores, onde cada um recebeu uma bandeja com quatro amostras de queijo processado, codificadas da seguinte maneira: 438, 107, 035, 826. Posteriormente, cada experimentador foi direcionado a uma cabine de experimenta√ß√£o, isolada, para sauas conclus√µes n√£o sofressem interfer√™ncia externa. Para o teste, recomendou-se que as amostras fossem consumidas da esquerda para direita, na ordem em que foram apresentadas. Depois, de consumidos os produtos, o experimentador deveria agrupaar as quatro amostras em dois pares, cjuas amostras fossem similares.
+
+##3.5 Teste de Ordena√ß√£o
+
+O testefoi aplicado em 35 avaliadores que experimentaram 5 amostras de diferentes extratos de molho de tomate com diferentes n√≠veis de sal. Para cada provador, a amostra que foi ordenada na primeira posi√ß√£o recebe o valor 1. A amostra ordenada na segunda posi√ß√£o  recebe o valor 2, e assim por diante.  Finalmente, para cada amostra os valores recebidos s√£o somados. Os resultados ser√£o analisados atr√°ves do Teste de Friedman, baseado na Estat√≠stica $\chi^{2}$ ;
+
+$$\chi^{2}=\frac{12}{b.k.(k+1)}\sum_{i=1}^{k}R_{i}^{2} - 3.b.(k+1)$$
+onde:
+
+$b$     := n√∫mero de linhas.
+$k$     := n√∫mero de colunas.
+$R_{i}$ := totais de ordena√ß√£o.
+  
+##3.6 Teste de Compara√ß√£o Multipla
+  
+
+  
+    
+#4. Resultados e Discuss√£o
+
+##4.1 Teste de compara√ß√£o pareada direcional
+  
+O experimento resultou nas seguintes indica√ß√µes:
+  
+- 5 experimentadores indicaram a amostra A como sendo a mais doce (indica√ß√£o incorreta);
+
+- 29 experimentadores indicaram a amostra B como sendo a mais doce (indica√ß√£o correta).
 
 ```{r}
 n <- 34
 correto <- 23
 p_h0 <- .5
 ```
-Para realizar o teste, consideramos a hipotese nula de que as amostras n„o se diferenciam em relaÁ„o ao gosto doce.
+Para realizar o teste, consideramos a hipotese nula de que as amostras n√£o se diferenciam em rela√ß√£o ao gosto doce.
 
-Este teste È baseado na distribuiÁ„o binomial, e considerando o n˙mero total de julgamentos igual a `r n` (n=`r n`), n˙mero de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste de comparaÁ„o pareada-prefereÁa e duo-trio"$^1$ que a hipÛtese nula pode ser rejeitada a um nÌvel de significancia de 0,1%, uma vez que observamos `r correto` que È um valor maior do que o valor esperado (27 acertos) considerando 0,1% de signicancia.
+Este teste √© baseado na distribui√ß√£o binomial, e considerando o n√∫mero total de julgamentos igual a `r n` (n=`r n`), n√∫mero de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste de compara√ß√£o pareada-prefere√ßa e duo-trio"$^1$ que a hip√≥tese nula pode ser rejeitada a um n√≠vel de significancia de 0,1%, uma vez que observamos `r correto` que √© um valor maior do que o valor esperado (27 acertos) considerando 0,1% de signicancia.
   
 ##4.2 Teste duo-trio
 
-O experimento resultou nas seguintes indicaÁıes:
+O experimento resultou nas seguintes indica√ß√µes:
   
-- 13 experimentadores indicaram a amostra correspondente ‡ amostra padr„o de forma incorreta;
+- 13 experimentadores indicaram a amostra correspondente √† amostra padr√£o de forma incorreta;
 
-- 18 experimentadores indicaram a amostra correspondente ‡ amostra padr„o de forma correta.
+- 18 experimentadores indicaram a amostra correspondente √† amostra padr√£o de forma correta.
 
 ```{r}
 n <- 31
 correto <- 18
 p_h0 <- .5
 ```
-Para realizar o teste, consideramos a hipotese nula de que as amostras n„o se diferenciam em relaÁ„o ‡ percepÁ„o sensorial.
+Para realizar o teste, consideramos a hipotese nula de que as amostras n√£o se diferenciam em rela√ß√£o √† percep√ß√£o sensorial.
 
-Este teste È baseado na distribuiÁ„o binomial, e considerando o n˙mero total de julgamentos igual a `r n` (n=`r n`), n˙mero de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste de comparaÁ„o pareada-prefereÁa e duo-trio"$^1$ que a hipÛtese nula n„o pode ser rejeitada a um nÌvel de significancia de 5%, uma vez que observamos y = `r correto` que È um valor menor do que o valor esperado (21 acertos) considerando 5% de signicancia.
+Este teste √© baseado na distribui√ß√£o binomial, e considerando o n√∫mero total de julgamentos igual a `r n` (n=`r n`), n√∫mero de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste de compara√ß√£o pareada-prefere√ßa e duo-trio"$^1$ que a hip√≥tese nula n√£o pode ser rejeitada a um n√≠vel de significancia de 5%, uma vez que observamos y = `r correto` que √© um valor menor do que o valor esperado (21 acertos) considerando 5% de signicancia.
 
 ##4.3 Teste Triangular
   
-O experimento resultou nas seguintes indicaÁıes:
+O experimento resultou nas seguintes indica√ß√µes:
   
 - 10 experimentadores indicaram a amostra diferente das demais de forma incorreta;
 
@@ -188,25 +235,86 @@ n <- 35
 correto <- 25
 p_h0 <- round(1/3,4)
 ```
-Para realizar o teste, consideramos a hipotese nula de que as amostras n„o se diferenciam em relaÁ„o ‡ percepÁ„o sensorial.
+Para realizar o teste, consideramos a hipotese nula de que as amostras n√£o se diferenciam em rela√ß√£o √† percep√ß√£o sensorial.
 
-Este teste È baseado na distribuiÁ„o binomial, e considerando o n˙mero total de julgamentos igual a `r n` (n=`r n`), n˙mero de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste triangular (p = 1/3)"$^1$ que a hipÛtese nula pode ser rejeitada a um nÌvel de significancia de 0,1%, uma vez que observamos y = `r correto` que È um valor maior do que o valor esperado (22 acertos) considerando 0,1% de signicancia.
+Este teste √© baseado na distribui√ß√£o binomial, e considerando o n√∫mero total de julgamentos igual a `r n` (n=`r n`), n√∫mero de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste triangular (p = 1/3)"$^1$ que a hip√≥tese nula pode ser rejeitada a um n√≠vel de significancia de 0,1%, uma vez que observamos y = `r correto` que √© um valor maior do que o valor esperado (22 acertos) considerando 0,1% de signicancia.
   
-#5. Conclus„o
+##4.4 Teste Tetra√©drico
+
+O experimento resultou nas seguintes indica√ß√µes:
   
-##5.1 Teste de comparaÁ„o pareada direcional
+- 16 experimentadores indicaram os pares corretamente;
+
+- 22 experimentadores indicaram incorretamete.
+
+```{r}
+N <- 38
+correto <- 16
+p_h0 <- round(1/3,4)
+```
+
+Para realizar o teste, consideramos a hipotese nula de que as amostras n√£o se diferenciam em rela√ß√£o √† percep√ß√£o sensorial.
+
+Este teste √© baseado na distribui√ß√£o binomial, e considerando o n√∫mero total de julgamentos igual a `r n` (n=`r n`), n√∫mero de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipotese nula igual a `r p_h0` (p=`r p_h0`). Identificamos atraves da tabela "Teste triangular (p = 1/3)"$^1$ que a hip√≥tese nula n√£o pode ser rejeitada a um n√≠vel de significancia de 5%, uma vez que observamos y = `r correto` que √© um valor menor do que o valor esperado (25 acertos) considerando 5% de signicancia.
+
+
+##4.5 Teste de Ordena√ß√£o
+
+O experimento resultou nas seguintes indica√ß√µes:
+
+- 35 pessoas realizaram o experimentos
+
+```{r}
+b <- 35
+K <- 5
+p_h0 <- round(1/3,4)
+```
+Temos como hip√≥teses:
+
+$H_0$: As distribui√ß√µes das k amostras n√£o diferem entre si
+
+$H_1$: As distribui√ß√µes das k amostras  diferem entre si
+
+Este teste √© baseado na distribui√ß√£o qui-quadrado, considerando os graus de liberdade iguais a 4 (5-1) e o n√∫mero de julgamentos igual a `r b*K`. Identificamos atraves da tabela qui-quadrado, cujo quantil te√≥rico a 4 graus de liberdade tem valor de `r round(qchisq(0.95,4),2)` e dado que $\chi^{2}=$ 65, rejeitamos a hippotese nula a um n√≠vel  de significancia de 5%, dado que 65 √© maior que 9,49.
+
+Utilizado a metodologia de Least Square Distance (LSD), vemos que: 
+Dentre as 5 amostras, A apresentou menor intensidade de gosto salgado, diferindo significativamente (p<0,05) de todas as demais.
+A mais salgada foi a amostra E, que diferiu de B (25% sal) e C (75% de sal).
+
+Podemos ver que a Amostra B se diferencia da amostra D, por√©m n√£o se diferencia da Amostra C.
+
+A amostra C n√£o diferiu da amostra D.
   
-Em relaÁ„o a este experimento sensorial podemos concluir, com base nos resultados, que existe diferenÁa perceptÌvel de doÁura, a 0,1% de signific‚ncia, entre os dois sucos, sendo que a amostra B (11% de aÁ˙car) foi indicada pelos avaliadores como sendo a mais doce. 
+##4.6 Teste de Compara√ß√£o Multipla
+  
+#5. Conclus√£o
+  
+##5.1 Teste de compara√ß√£o pareada direcional
+  
+Em rela√ß√£o a este experimento sensorial podemos concluir, com base nos resultados, que existe diferen√ßa percept√≠vel de do√ßura, a 0,1% de signific√¢ncia, entre os dois sucos, sendo que a amostra B (11% de a√ß√∫car) foi indicada pelos avaliadores como sendo a mais doce. 
   
 ##5.2 Teste duo-trio
-Em relaÁ„o a este experimento sensorial podemos concluir, com base nos resultados, que n„o existe diferenÁa perceptÌvel entre o leite integral e o semidesnatado, ao nÌvel de 5% de signific‚ncia. 
+  
+Em rela√ß√£o a este experimento sensorial podemos concluir, com base nos resultados, que n√£o existe diferen√ßa percept√≠vel entre o leite integral e o semidesnatado, ao n√≠vel de 5% de signific√¢ncia. 
 
 ##5.3 Teste Triangular
   
-Em relaÁ„o a este experimento sensorial podemos concluir, com base nos resultados, que existe diferenÁa significativa entre os refrigerantes de cola normal e zero a 0,1% de signific‚ncia.
+Em rela√ß√£o a este experimento sensorial podemos concluir, com base nos resultados, que existe diferen√ßa significativa entre os refrigerantes de cola normal e zero a 0,1% de signific√¢ncia.
   
-#6. ReferÍncias Bibliogr·ficas
+##5.4 Teste Tetra√©drico
+  
+  
+  
+##5.5 Teste de Ordena√ß√£o
+  
+  
+  
+##5.6 Teste de Compara√ß√£o Multipla
+  
+  
+  
+#6. Refer√™ncias Bibliogr√°ficas
   
 
-1 - O'MOHONY (1996)
+1 - O MOHONY, M. Sensory evaluation of food: statistical methods and procedure. Boca Raton, FL: CRC/Taylor and Francis, 1986. (Food Science and technology: 16). ISBN: 0824773373
 

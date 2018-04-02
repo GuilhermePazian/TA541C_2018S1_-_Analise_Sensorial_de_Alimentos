@@ -5,7 +5,6 @@ lang: pt-br
 header-includes:
 - \usepackage{setspace}
 - \usepackage{indentfirst}
-- \usepackage[utf8]{inputenc}
 - \usepackage{mathptmx}
 - \usepackage{enumerate}
 - \usepackage{url} 
@@ -81,8 +80,9 @@ options(OutDec= ",")
 ```{r pacotes e funcoes,echo=FALSE}
 #pacotes
 #Insira os pacotes utilizados na lista abaixo para que todos consigam rodar o programa independente do pc
-pacotes <- c("readxl")
-
+pacotes <- c("readxl","xtable")
+library(readxl)
+library(xtable)
 #descomente o código abaixo caso seja a 1 vez que for rodar noo seu pc
 
 ###################
@@ -128,7 +128,7 @@ Amostra B: refrigerante zero caloria
 
 A diferença sensorial é geral, não especificada.
   
-##2.4 Teste Tetraédrico
+##2.4 Teste Tetraedrico
 
 O teste foi realizado com objetivo de testar se a redução de gordura em um determinado laticínio é perceptível sensorialmente. Para tal teste, utilizou-se duas versões do queijo processado, um com 25% de gordura e outra com uma versão light, com 12% de gordura. 
 
@@ -149,10 +149,15 @@ Amostra D: 0,25% MSG / 0,75% sal
 Amostra E: 0 MSG / 1,0% sal
 
   
-##2.6 Teste de Comparação Múltipla
+##2.6 Teste de Comparação Multipla
   
-O objetivo do teste é a de comparação 
-  
+O objetivo do teste é a de comparação de amostras, sendo que os provadores recebem uma amostra controle (C) e duas ou mais amostras codificadas. Eles Devem avaliar as amostras e indicar o grau de diferença comparativa de cada uma com o padrão, usando uma escala estruturada. 
+
+O teste em questão tinha como objetivo identificar qual amostra de suco de laranja tinha a diluição como a amostra de controle. Haviam três amostras codificadas e com a respectiva diluição:
+
+Amostra 502 : controle (diluição padrão)
+Amostra 891: 75% diluição padrão
+Amostra 764: 125% diluição padrão
   
   
 #3. Materiais e métodos
@@ -175,7 +180,7 @@ Método utilizado: Teste Triangular.
 
 O teste foi aplicado em 35 experimentadores, cada experimentador recebeu uma bandeja de plástico com três amostras codificadas (uma amostra A, uma B e uma terceira aleatorizada) de refrigerante tipo cola apresentadas em copos de cerca de 30 ml. Os experimentadores foram direcionados para uma cabine de experimentação para que pudessem ter um certo isolamento dos demais e assim realizar uma análise independente. Em estado de concentração deveriam provar as amostras codificadas na sequência, da esquerda para a direita, uma única vez e indicar qual das amostras era diferente das demais. A sequência das amostras foram aleatorizadas para cada experimentador, assim como a terceira amostra foi aleatorizada entre as amostras A e B.
   
-##3.4 Teste tetraédrico
+##3.4 Teste tetraedrico
 
 Método utilizado: Teste tetraédrico
 
@@ -195,10 +200,9 @@ $k$     := número de colunas.
 $R_{i}$ := totais de ordenação.
 
   
-##3.6 Teste de Comparação Múltipla
-  
+##3.6 Teste de Comparação Multipla
 
-  
+Cada provador recebia uma amostra controle e três amostras codificadas. Primeiro, prova-se a mostra controle e em seguida, deve-se provar as outras três. Depois, deve-se avaliar, utilizando uma escala, indo de 0 = nenhuma diferença até 9 = extremamente diferente, o quanto as amostras diferem da amostra controle (C). Os resultados serão analisados segundo a metodologia ANOVA de dois fatores.
     
 #4. Resultados e Discussão
 
@@ -253,7 +257,7 @@ Para realizar o teste, consideramos a hipótese nula de que as amostras não se 
 
 Este teste é baseado na distribuição binomial, e considerando o número total de julgamentos igual a `r n` (n=`r n`), número de julgamentos corretos igual a `r correto` (y = `r correto`) e a probabilidade de acerto ao acaso sob a hipótese nula igual a `r p_h0` (p=`r p_h0`). Identificamos através da tabela "Teste triangular (p = 1/3)"$^1$ que a hipótese nula pode ser rejeitada a um nível de significancia de 0,1%, uma vez que observamos y = `r correto` que é um valor maior do que o valor esperado (22 acertos) considerando 0,1% de significância.
   
-##4.4 Teste Tetraédrico
+##4.4 Teste Tetraedrico
 
 O experimento resultou nas seguintes indicações:
   
@@ -301,8 +305,35 @@ Podemos ver que a Amostra B se diferencia da amostra D, porém não se diferenci
 
 A amostra C não diferiu da amostra D.
   
-##4.6 Teste de Comparação Múltipla
-  
+##4.6 Teste de Comparação Multipla
+
+```{r}
+a = matrix(c(156.85,35,4.49,0.89,0.64,1.59,167.35,2,83.68,16.58,"<0.01",3.13,353.31,70,5.04,NA,NA,NA,677.52,107,NA,NA,NA,NA),4,6, byrow = TRUE)
+a = data.frame(a)
+rownames(a) = c("Linhas", "Colunas","Erro","Total")
+colnames(a) = c("SQ","gl","MQ","F","Valor-p","F crítico")
+```
+
+Segue a tabela com os resultados obtidos via ANOVA: 
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rllllll}
+  \hline
+ & SQ & gl & MQ & F & Valor-p & F crítico \\ 
+  \hline
+Linhas & 156.85 & 35 & 4.49 & 0.89 & 0.64 & 1.59 \\ 
+  Colunas & 167.35 & 2 & 83.68 & 16.58 & < 0.01 & 3.13 \\ 
+  Erro & 353.31 & 70 & 5.04 &  &  &  \\ 
+  Total & 677.52 & 107 &  &  &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+Podemos ver que há diferença entre as amostras, pois o valor-p das Colunas é da ordem < 1%,ou seja, mesmo a um nível de significância, rejeitariamos a hipótese que não difirença entre amostras com diluição igual ao do controle e com as outras diluições. Porém, ainda sim, não conseguimos distinguir se uma amostra que difere mais do que a outra. Para atingirmos tal diferenciação, utilizaremos o Teste de Dunnet.
+
+Podemos ver que a diferença a diferença entre a amostra controle e amostra B é de 2. Entre a controle e a amostra C é de 3.
+
 #5. Conclusão
   
 ##5.1 Teste de comparação pareada direcional
@@ -319,15 +350,17 @@ Em relação a este experimento sensorial podemos concluir, com base nos resulta
   
 ##5.4 Teste Tetraédrico
   
-  
+Podemos concluir que a um nível de significância de 5%, não rejeitaremos a hipótese nula de que há diferença entre o queijo integral e o light.
   
 ##5.5 Teste de Ordenação
-  
-  
+
+Conclui-se a partir desse teste que há diferença entre as amostras ordenadas, dado que o teste de Friedman rejeiutou a hipótese nula. 
+
+Porém ao observarmos as diferenças, podemos ver que entre as amostras em todas diferem entre si, como o caso da amostra B e C.
   
 ##5.6 Teste de Comparação Múltipla
   
-  
+Pelos resultados podemos concluir que: há diferença significativa entre as amostra, evidenciada pela ANOVA. Com o teste de Dunnet, podemos ver que as duas amostras C diferenciam-se em relação a  controle, em nível de siginificância de 5% do que a amostra B, porém a amostra C diferencia-se em maior grau. 
   
 #6. Referências Bibliográficas
   
